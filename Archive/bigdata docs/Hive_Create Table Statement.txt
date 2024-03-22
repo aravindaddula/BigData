@@ -1,0 +1,20 @@
+CREATE EXTERNAL TABLE `dl_actuarial.lnl_gaapstat_static_mv_index`(
+  `typ_val` string 
+  `res_type` string
+)
+ROW FORMAT DELIMITED 
+  FIELDS TERMINATED BY ',' 
+STORED AS INPUTFORMAT 
+  'org.apache.hadoop.mapred.TextInputFormat' 
+OUTPUTFORMAT 
+  'org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat'
+LOCATION
+  's3://gl-cdm-dev-actuarial/vmf/lnl/staticdata/mv_index'
+TBLPROPERTIES (
+  'areColumnsQuoted'='false', 
+  'classification'='csv', 
+  'columnsOrdered'='true', 
+  'compressionType'='none', 
+  'delimiter'=',', 
+  'transient_lastDdlTime'='1701412984', 
+  'typeOfData'='file')

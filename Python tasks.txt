@@ -1,0 +1,221 @@
+Question 1: Given a two integer numbers print their product and  if the product is greater than 1000 
+else print their sum.
+Question 2: Given a range of first 10 numbers, Iterate from start number to the end number and print 
+the sum of the current number and previous number
+Question 3: Given a string, display only those characters which are present at an even index number.
+Question 4: Given a string and an integer number n, remove characters from a string starting from zero up to n 
+and return a new string
+Question 5: Given a list of numbers, return True if first and last number of a list is same
+Question 6: Given a list of numbers, Iterate it and print only those numbers which are divisible of 5
+Question 7: Accept group of integer values and print them in descending order
+question 8: Accept a list and sort the list without using any predefined methods
+question 9: Accept a string and display the count of all capital letters and small letters without using any methods
+
+possible exceptions:
+
+NameError,TypeError,UnboundLocalError
+-----------------
+
+Question 7: Write a Python program to read an entire text file
+
+Question 8: Write a Python program to read first n lines of a file.
+
+Question 9: Write a Python program to append text to a file and display the text.
+
+Question 10: Write a Python program to read last n lines of a file
+
+Question 11: Write a Python program to write a list to a file
+
+Question 12: Write a Python program to read a file line by line and store it into a list
+
+Question 13: Write a Python program to read a file line by line store it into a variable
+
+Question 14: Write a Python program to read a file line by line store it into an array.
+
+Question 15: Write a python program to find the longest words
+
+Question 16: Write a Python program that takes a text file as input and returns the number of words of a given text file.
+
+	Note: Some words can be separated by a comma with no space.
+
+Question 17: Write a Python program to copy the contents of a file to another file
+
+Question 18: Write a Python program to combine each line from first file with the corresponding line in second file.
+
+Question 19: Write a Python program to remove newline characters from a file
+
+Question 20: Write a Python program to generate 26 text files named A.txt, B.txt, and so on up to Z.txt
+
+Question 21: Write a Python program to create a file where all letters of English alphabet are listed by specified number of letters on each line.
+
+Question 22: Write a Python program to check that a string contains only a certain set of characters (in this case a-z, A-Z and 0-9)
+
+Question 23: Write a Python program that matches a string that has an a followed by zero or more b's
+
+Question 24: Write a Python program that matches a string that has an a followed by one or more b's.
+
+Question 25: Write a Python program that matches a string that has an a followed by zero or one 'b'. 
+
+Question 26: Write a Python program that matches a string that has an a followed by three 'b'
+
+Question 27: Write a Python program that matches a string that has an a followed by two to three 'b'.
+
+Question 28: Write a Python program to find sequences of lowercase letters joined with a underscore.
+
+Question 29: Write a Python program to find the sequences of one upper case letter followed by lower case.
+
+Question 30: Write a Python program to square and cube every number in a given list of integers using Lambda. r
+Original list of integers: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Square every number of the said list: [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+Cube every number of the said list: [1, 8, 27, 64, 125, 216, 343, 512, 729, 1000]
+
+Question 31: Write a Python program to find if a given string starts with a given character using Lambda
+Sample Output:
+True
+False
+
+Question 32: Write a Python program to extract year, month, date and time using Lambda. 
+Sample Output:
+2020-01-15 09:03:32.744178
+2020
+1
+15
+09:03:32.744178
+
+Question 33: Write a Python program to check whether a given string is number or not using Lambda.
+Sample Output:
+True
+True
+False
+True
+False
+True
+Print checking numbers:
+True
+True
+
+Question 34: Write a Python program to create Fibonacci series upto n using Lambda. 
+Fibonacci series upto 2:
+[0, 1]
+Fibonacci series upto 5:
+[0, 1, 1, 2, 3]
+Fibonacci series upto 6:
+[0, 1, 1, 2, 3, 5]
+Fibonacci series upto 9:
+[0, 1, 1, 2, 3, 5, 8, 13, 21]
+
+Question 35: Write a Python program to find intersection of two given arrays using Lambda. Go to the editor
+Original arrays:
+[1, 2, 3, 5, 7, 8, 9, 10]
+[1, 2, 4, 8, 9]
+Intersection of the said arrays: [1, 2, 8, 9]
+
+Question 36: Write a Python program to rearrange positive and negative numbers in a given array using Lambda. 
+Original arrays:
+[-1, 2, -3, 5, 7, 8, 9, -10]
+Rearrange positive and negative numbers of the said array:
+[2, 5, 7, 8, 9, -10, -3, -1]
+
+Question 37: Write a Python program to count the even, odd numbers in a given array of integers using Lambda.
+Original arrays:
+[1, 2, 3, 5, 7, 8, 9, 10]
+Number of even numbers in the above array: 3
+Number of odd numbers in the above array: 5
+
+Question 38: Write a Python program to reverse a string
+for ex - 'asdfgh-1234'
+output - '4321-hgfdsa'
+
+Question 39: Write a Python program to count number of occurence of letter in single word
+input ="aaccbbcccdaaaaddde"
+output = a2c2b2c3d1a4d3e1
+
+Question 40: Write a Python program that matches a string that has an a followed by zero or one 'b'
+
+Question 41: Write a NumPy program to create a 4x4 array with random values, now create a new array from the said array swapping first and last rows
+
+Question 42: Write a NumPy program to create a new array of given shape (5,6) and type, filled with zeros.
+
+Question 43: Write a NumPy program to sort a given array by row and column in ascending order
+
+Question 44: Write a NumPy program to extract all numbers from a given array which are less and greater than a specified number
+
+Question 45: Write a NumPy program to replace all numbers in a given array which is equal, less and greater to a given number.
+
+Question 46: Write a NumPy program to create an array of equal shape and data type of a given array.
+
+Question 47: Write a NumPy program to create a three-dimension array with shape (3,5,4) and set to a variable
+
+Question 48: Write a NumPy program to create a 4x4 array, now create a new array from the said array swapping first and last, second and third columns
+
+Question 49: Write a NumPy program to swap rows and columns of a given array in reverse order.
+
+Question 50: Write a NumPy program to multiply two given arrays of same size element-by-element
+
+Question 51: Develop an Banking apllication which will create accounts and issues debit cards. Banking application will accept all necessary information of the user and 
+creates an user account and issues a debit card (refer guide lines for debit card number instructions). User will use the ATM application to deposit, with draw, balance inquiry, mini statement and change password. 
+
+Question 52: Parking Ticket Allotment
+===========================================
+
+Statement: 
+Develop a parking lot ticketing component which will support have 3 types of parking spaces (small, medium, large) 
+for cars and one type for Bikes. The number of spaces should be configurable for each type.
+ Whenever a car or bike comes in, it will check for the availability based on parking history and either allocates the slot to 
+the right car based on car size. Cars will be charged based on sizes, configurable. 
+Below are the charges for Cars: 
+[Small  $1/hrs, ($ 10/day) {$ 45/week}, medium  2 $/hrs. ($ 15/day) {$ 65/week}, large $ 5/hrs. ($ 20/day) {$ 80/week}].
+
+Below are the charges for Bikes:
+$1/hrs, ($ 8/day) {$ 35/week}
+
+Guidelines
+1. Any car driver or bike raider will interact 2 times with the system. While coming in for parking (system to check availability) and while going out (system to 
+calculate payment)
+2. While coming in for Parking, the system should accept few criteria  and return a parking lot number, if parking is available.
+3. While going out, system should accept the parking lot number and provide the calculated amount to be paid.
+4. Use the best programming practices and code coverage with Test cases.
+5. The code should be extensible and configurable.
+6. Provide all the assumptions made.
+7. Any number of days beyond a week can be treated as a weekly rate. For instance, 8 days means the driver is charged with weekly rate for 8 days
+
+
+Question 53: We can concatenate two strings in python using “+”. Similar way, we need to use “-“ to get difference between two strings. Write a python script for this. 
+
+Question 54: Accept a string and level and print the string as mentioned below example. 
+String: ABCDEFGHIJKLM
+Level : 4
+
+A						G						M
+	B				F		H				L	
+		C		E				I		K		
+			D						J			
+
+
+
+Question 55: Reverse Pattern of Digits from 10 
+Pattern:
+1
+3 2
+6 5 4
+10 9 8 7
+
+Question 56: Pattern:
+0  
+0 1  
+0 2 4  
+0 3 6 9  
+0 4 8 12 16  
+0 5 10 15 20 25  
+0 6 12 18 24 30 36
+
+
+Question 57: Pattern:
+        * * * * * * 
+         * * * * * 
+          * * * * 
+           * * * 
+            * * 
+             * 
+
+Question 58: Try to convert  bit by bit hex data to EBCDIC [extended binary coded decimal interchange code]
