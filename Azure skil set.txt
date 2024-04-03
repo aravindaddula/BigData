@@ -1,0 +1,15 @@
+SQL,SQL server,Python,SDLC,Microsoft Azure,Azure Data Factory,Azure Data Lake Storage,Azure SQL
+,Azure Data Bricks,HD Insights,ML Service, ML Ops,Azure Dev Ops,
+Azure Data Bricks,machine learning.
+Azure Synapse,Azure Data Warehouse
+
+
+
+Hello Sahaj,
+
+I was wondering if the opening is in your team or if you know the person hiring for this role.
+
+I am interested in learning more about the opportunity and would appreciate any information you may be able to share and I look forward to hearing back from you.
+
+Best regards,
+[Name]”
