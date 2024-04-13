@@ -1,0 +1,24 @@
+API Key:
+wLSS75GMl5XyRBCbgF18imrjJ
+
+API Secret Key:
+t1R3Q8I0fkmfAe16fPDI9hUlMH1RqdeaEuoXMz7lhl0esm4tX8
+
+
+COnsumer keys
+
+Access Token:
+vH3dcQqIPQG0rvbrAON94iSKt
+
+
+api key Secret:
+WiJHHlvhfLtnWBv60klCs8HkOblRZFe0eGErdFrwl29HAOkULE
+
+
+
+api_key='943400505253904384-DEC1MQgf3Lw1CpqsycyQCjqCA0c5GsE'
+api_key_Secret='jdH6MmhILnyVgPfrOLvo53bUhh1glnmD1c1KLgwGjoqxZ'
+consumer_token='hf2qmQwoyqK8lb9NXtnoptaET'
+consumer_token_secret='6w7L9oTSZPoYFnMUaRbBoaW4xbCM6ZMCquPhNRCybrPoLR8SdB'
+
+
