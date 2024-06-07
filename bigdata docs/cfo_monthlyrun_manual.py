@@ -4,7 +4,7 @@ from airflow import DAG
 from airflow.utils.dates import days_ago
 from airflow.operators.dummy import DummyOperator
 from airflow.operators.postgres_operator import PostgresOperator
-from  airflow.providers.amazon.aws.operators.athena import AWSAthenaOperator
+from airflow.providers.amazon.aws.operators.athena import AWSAthenaOperator
 from airflow.operators.bash_operator import BashOperator
 from airflow.operators.python_operator import PythonOperator
 import boto3
@@ -26,7 +26,7 @@ dag = DAG(
     'cfo_monthlyrun_manual',
     default_args=default_args,
     dagrun_timeout=timedelta(hours=5),
-    schedule_interval=None,
+    schedule_interval=None, #
     start_date=days_ago(1)
 )
 
@@ -55,6 +55,7 @@ run_cfoinsertdataintocfobase = AWSAthenaOperator(
     output_location=f's3://gl-cdm-dev-actuarial/vmf/cfo/inserttableslogs',
     database='"AwsDataCatalog".actuarial_inputs'
         )
+
 run_cfoinsertdataintocfocoverage = AWSAthenaOperator(
     task_id="run_cfoinsertdataintocfocoverage",
     query='sql/vmf/cfo/CFO_to_Poly_Cov_Extract_QueryInsert.sql',

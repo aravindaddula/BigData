@@ -1,0 +1,38 @@
+sudo apt update;
+sudo apt install mysql-server;
+sudo systemctl start mysql.service
+sudo mysql
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '7730061615';
+exit;
+mysql -u root -p
+ALTER USER 'root'@'localhost' IDENTIFIED WITH auth_socket;
+
+To check portno:
+ SHOW GLOBAL VARIABLES LIKE 'PORT';
+
+Connection Details:
+Identify the connection details for your MySQL database, including:
+Hostname or IP address of the MySQL server (mysql_host) -- localhost
+Port number ( mysql_port ) -- 3306
+Database name (database_name) -- employees_db
+Table name you want to import (table_name) -- emplyee
+Username with access to the database (username) -- root
+Password for the username (password) -- 7730061615
+
+
+3. Sqoop Import Command:
+Build the Sqoop import command using the following format:
+
+Syntax:
+sqoop import \
+  --connect <jdbc_url> \
+  --table <table_name> \
+  --target-dir <hdfs_output_directory> \
+  [other Sqoop options]
+  
+Example:
+sqoop import \
+  --connect jdbc:mysql://localhost:3306/employees_db \
+  --table employee \
+  --target-dir /users/sqoop/employees_db
+
