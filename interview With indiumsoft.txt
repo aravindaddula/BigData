@@ -193,12 +193,8 @@ where top_orders <=5
 ------------------------Client ROund
 
 1.you have 3 sources you need to build quality check framework, what are the points to consider while building.
-2.
 
-
-
-
-you have orders table that contains 
+2.you have orders table that contains 
 order_id,order_date,restaurant,city columns in the table
 give me input data for the above with different cities
 
