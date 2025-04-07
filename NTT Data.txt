@@ -1,0 +1,24 @@
+L1: duration 30 mins.
+1.You have 500 airflow dags , how can you list all of their names, start time,end time,run status using python
+Ans:
+=> Using Airflow REST API
+AIRFLOW_URL = "http://your-airflow-host:8080/api/v1/dags"
+
+
+=> Querying the Airflow Metadata Database (PostgreSQL or MySQL)
+query = """
+        SELECT dag_id, execution_date, start_date, end_date, state
+        FROM dag_run
+        ORDER BY execution_date DESC;
+    """
+
+*********Coding question:
+dict1 = {"a": 10, "b": 20}
+dict2 = {"b": 30, "c": 40}
+ 
+OUTPUT: 
+{"a": 10, "b": 50, "c": 40}
+
+************
+
+2.datframe Dynamic flatmap
