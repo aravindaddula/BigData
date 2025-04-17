@@ -1,0 +1,216 @@
+===================================> L1 ==================================>
+schedule matches between teams
+Team
+id	TeamName
+1	India
+2	Pakistan
+3	Srilanka
+4	Australia
+
+select
+
+distinct a.teamName || 'vs' || b.TeamName as Match
+
+from team as a
+cross join team as b
+where a.teamName < b.TeamName
+
+===============
+
+select * from (
+select
+*,Dense_rank() over(partition by subject order by marks desc ) as rank
+
+from marks
+)
+where rank=1
+
+===========
+----> PySpark <-----
+Question: Given a list of sales transactions with product names and their corresponding sales amounts,
+calculate the total sales for each product and store the results in a dictionary.
+sales = [("Widget", 500), ("Gadget", 750), ("Widget", 1000), ("Doodad", 1200), ("Gadget", 600)] 
+product_sales_dict = {}
+
+
+sales = [("Widget", 500), ("Gadget", 750), ("Widget", 1000), ("Doodad", 1200), ("Gadget", 600)] 
+sales = spark.createDataFrame(sales,["Product","price"])
+total_price=sales.groupBy("Product").sum("price").alias("total_price")
+total_price.show(truncated=False)
+
+how do you allocate memory memory allocation
+narrow transformations vs broad transformations
+
+
+===================> L2 ====================>
+Question 1:
+we have stores table that contain columns (Store_id,store_nm,Product)
+Find the sstores which either sell both tea and coffee  or coffee and jam
+
+Store_id	store_nm	Product
+1	bb	tea
+1	bb	coffee
+2	dmart	coffee
+3	more	tea
+4	reliance	tea
+4	reliance	coffee
+4	reliance	jam
+5	b mart	coffee
+5	b mart	jam
+
+output
+1 bb team 1 bb coffee
+
+
+select
+s1.store_name
+
+from stores as s1
+inner join stores as s2
+s1.id=s2.id
+
+where (s1.Product='tea' and s2.product='coffee')  or (s1.product='coffee' and s2.product='jam')
+
+=======
+we have orders table with the columns (Orderid,Orderdt,custid,Endloc)
+write a sql query to return the customers who place the order within 12 days
+
+Orderid	Order dt      cust id	End loc
+1	2021/12/31	123a	b1
+2	2022/01/11	123a	b2
+3	2023/01/01	123a	b3
+4	2023/02/02	123a	b4
+5	2023/01/01	346b	b5
+6	2023/02/02	346b	b6
+7	2023/02/14	346b	b7
+8	2023/02/17	346b	b7
+
+select * 
+from(
+select
+cust_id
+orderdt,
+lead(orderdt) over(partition by custid orderby endloc) as nextdt
+from orders
+)
+where date_substract('days',nextdt,orderdt) <=12
+
+========
+
+spark
+
+
+department
+did, dname
+
+students:
+student nm , sstud id , deptid , total marks secured , year
+
+output
+dept nm , studid , stud nm , year , total marks
+
+
+top 5 stds for each dept for each year
+
+
+stds=spark.read.csv('studets')
+dept=spark.read.csv('depts')
+
+students=stds.join(dept,stds.did==dept.deptid,'inner')
+
+
+sr = students.withColumn("s_rank",\
+		dense_rank().over(Window.partitionBy(["deptid"]).orderBy("total marks secured").desc()))
+
+std_ranks.select(sr.deptnm ,sr.studid , sr.studnm, sr.year,sr.total marks).where(sr.s_rank<=5)\
+show()
+
+my L2 round interview experience.
+i have been asked 2 sql questions to solve in 30 mins,1 spark question to solve in 5 mins
+Question 1:
+we have stores table that contain columns (Store_id,store_nm,Product)
+Find the sstores which either sell both tea and coffee  or coffee and jam
+
+Question 2:
+we have orders table with the columns (Orderid,Orderdt,custid,Endloc)
+write a sql query to return the customers who place the order within 12 days
+
+PySpark Question 3:
+we have 2 csv files,one contains department data with dept_name,dept_id and second csv file contains
+students data with studentname,stud_id , deptid , total_marks_secured , year
+we need to "return the top 5 stds for each dept for each year" in the output format
+deptname, studid , stud_name,year,total marks
+
+
+4.
+
+
+
+===L3 Round
+
+
+Connected with clients daily to discuss project progress and updates.
+Worked within an Agile process to deliver projects in a timely and efficient manner.
+Performed data validation and ensure data accuracy and completeness by creating automated tests and implementing data validation processes.
+Analysing the source data.
+Transformed SQL queries into Spark SQL code for ETL pipelines.
+Rewritten MainFrame jobs into PySpark scripts using DataFrame Api to process data and perform transformations.
+Developed ETL workflows in PySpark to extract data from various sources like data lake,SQL Server and transform it to meet business needs.
+Troubleshooting problems and resolving issues.
+Designed and develop Airflow DAGs to schedule and manage ETL workflows.
+Running Spark jobs on AWS Glue using Airflow DAGs.
+Used Hive for querying and reconciliation.
+Involved in Technical and Test case documents preparations.
+
+
+---Client round
+
+
+
+top 5 restaurant,city
+
+city,restaurant,order_id,order_month
+1 80
+2 60
+
+
+select * from (
+select
+
+city,restaurant,
+dense_rank() over(partition by restaurant order by city,restaurant ) as top_orders
+
+from orders
+)
+1
+2
+3
+
+where top_orders <=5
+--,month
+
+
+------------------------Client ROund
+
+1.you have 3 sources you need to build quality check framework, what are the points to consider while building.
+
+2.you have orders table that contains 
+order_id,order_date,restaurant,city columns in the table
+give me input data for the above with different cities
+
+o/p
+i want to return top 5 resturants that got orders in each city for every month
+
+
+select * from (
+
+select *,dense_rank(partition by restaurant,city order by o_cnt desc ) as top_order
+(
+select
+restaurant,city,month,count(oid) as o_cnt
+from orders
+group by restaurant,city,month
+)
+)
+where top_order <=5
+
