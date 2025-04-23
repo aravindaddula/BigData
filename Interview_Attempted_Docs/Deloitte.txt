@@ -52,7 +52,7 @@ Pdf = sum_by_cnt.withColumn("Canada",when(col("Country")=='Canada"),col("Amount)
 pdf.select("Product","Canada","China","Mexico","USA")
 
 
----------
+---------------------------------------------
 
 3.From the doctors table, fetch the details of doctors who work in the same hospital but in different speciality.
 
@@ -70,7 +70,7 @@ id name speciality hospital city consultation_fee
 
 
 select
-d1.name,d1.speciality,d1.hospital,d1.city,d1,consultation_fee
+	d1.name,d1.speciality,d1.hospital,d1.city,d1,consultation_fee
 
 doctors as d1
 inner join doctors as d2
