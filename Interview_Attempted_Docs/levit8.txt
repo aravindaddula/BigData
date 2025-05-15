@@ -1,0 +1,24 @@
+1.Unix in Data processoon...your previous roles, particularly in relation to data processing or management.
+
+2.Python and PySpark. Can you describe how you have used Python in conjunction with PySpark for data processing tasks?
+ What specific libraries or frameworks have you utilized, and how did they enhance your workflow?
+
+3.Can you describe a specific situation where you used Unix scripting to automate a task or process?
+How did it improve efficiency in your workflow?
+
+4.Could you share your experience with working in data lakes and data warehouses? Specifically,
+how have you utilized tools like Hive or Delta Lake in your projects, and what benefits did you find in using these technologies?
+
+5.Additionally, could you share examples of how you've adapted to different work environments in the past?
+ Understand how you might fit into our team.
+
+6.What importance do you place on continuous learning and development in your career? 
+And how do you seek out opportunities for growth in your current role or previous position?
+
+7.Can you share an experience where you received constructive feedback from a colleague or how did you handle it?
+
+8.Can you share an example of a decision-making process you were involved in within a team or organization? How were decisions reached,
+ and what was your role in the process?
+
+9.To ensure we get a clearer understanding, could you please elaborate on your experience with Scala,
+particularly in a banking or financial services context? I'm interested in hearing about specific projects or challenges you faced.

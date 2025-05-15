@@ -75,3 +75,99 @@ select
 doctors as d1
 inner join doctors as d2
 on d1.hospital = d2.hospital and d1.speciality != d2.speciality
+
+
+-------------------------Second interview - 27-04-2025
+
+1.tell me about your self
+2.what is your dataware house design, how your data consumes
+3.what type of source is that is that API source
+4.are you taking data from outside of AWS
+5.in data migration service How did you paln to migrate the data from postgres to s3 
+  when the size of the data is very huge with minimal downtime.
+6.are you using any ETL Tool , how you are moving the data from s3 to redshift
+To copy the data from redshift what are the things required
+what is ARN
+what is dag in airflow
+optimization techniques used in pyspark
+what is the difference between broadcast join and broadcast variable
+have you used repartition and coalesce
+what is the data catalog in glue
+are you following agile methodology tell me how it works.
+in agile methodology, how to get no.of days required for task
+how do you do the ci/cd in your project
+how much you have worked on the development part and support part
+do you have any design experirience
+if you have to do data modeling from where you will start
+do you know about normalization and types
+what does it mean if a dataset is in dataset format
+
+he is using these tools : ec2,etl,glue,lambda,rds,redshift
+
+
+
+------------Coding Questions---------------------------------------
+1.
+def extendList(val, list=[]):
+    list.append(val)
+    return list
+ 
+ 
+list1 = extendList(10)
+list2 = extendList(123,[])
+list3 = extendList('a')
+ 
+ 
+print "list1 = %s" % list1
+print "list2 = %s" % list2
+print "list3 = %s" % list3
+
+
+Output:
+[10,'a'] # default list
+[123]
+[10,'a']
+
+---------------
+
+def multipliers():
+  return [lambda x : i * x for i in range(4)]
+print [m(2) for m in multipliers()]
+
+Output:
+[0,2,4,6]
+[2,4,6]
+
+-----------------------
+
+
+
+A
+----
+1
+1
+Null
+0
+Null
+2
+3
+ 
+B
+----
+1
+1
+1
+Null
+0
+Null
+4
+5
+7
+
+-------
+inner - 7
+left - 7 + 3 + 1 =11
+full = 7 + 4 + 5=16
+7*9=63
+left anti-- 3
+left semi 7
