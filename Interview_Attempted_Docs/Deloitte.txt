@@ -41,8 +41,7 @@ output:
 |Carrots|  2000| 1200|  null|1500|
 
 
-
-sum_by_cnt=df.groupBy("Product","Country").sum("Amount")
+sum_by_cnt = df.groupBy("Product","Country").sum("Amount")
 
 Pdf = sum_by_cnt.withColumn("Canada",when(col("Country")=='Canada"),col("Amount))\
 .withColumn("China",when(col("Country")=='China"),col("Amount)) \
@@ -50,7 +49,6 @@ Pdf = sum_by_cnt.withColumn("Canada",when(col("Country")=='Canada"),col("Amount)
 .withColumn("USA",when(col("Country")=='USA"),col("Amount))
 
 pdf.select("Product","Canada","China","Mexico","USA")
-
 
 ---------------------------------------------
 
@@ -104,9 +102,7 @@ what does it mean if a dataset is in dataset format
 
 he is using these tools : ec2,etl,glue,lambda,rds,redshift
 
-
-
-------------Coding Questions---------------------------------------
+------Coding Questions---------------------------------------
 1.
 def extendList(val, list=[]):
     list.append(val)
@@ -171,3 +167,29 @@ full = 7 + 4 + 5=16
 7*9=63
 left anti-- 3
 left semi 7
+
+
+-----------Deloitte may 23rd
+
+1. give me pyspark code to extract only incremental records
+
+1. we gave you a plane aws account and list the services you use and list the steps to migrate the data from sqlserver to redshift 
+
+sqlserver --> s3 --> redshift
+
+services : iam,glue,s3,redshift,ec2
+
+1.iam role,from iam user access,secret key with glueServiceRole access
+2.create bucket (pub access)
+3.ec2 with 64gb ram
+
+
+2.difference between views,materialized views ? when session ends ?
+3.list dataware housing concepts
+4.union and union all the datasets
+
+
+
+
+delta-core_2.12-3.1.0.jar
+delta-storage-3.1.0.jar

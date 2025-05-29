@@ -1,0 +1,32 @@
+1.about project
+2.instance types in ec2
+3.difference between star schema and snowflake schema
+4.have you ever faced a situation where you need to upsert the data
+5.spark joins, how it works
+6.spark optimization technique you have worked on
+7.difference between coalesce and repartition, which one you pick.
+8.sparkSession vs SparkContext
+9.tools you are using in aws. and clouds you are familiar with
+10.where spark stores the data ? is it in ram or disk.
+11.cache vs persist which one you choose ?
+12.sql coding question
+ddl:transactions ( transaction_id INT, customer_id INT, transaction_date DATE, amount DECIMAL ) 
+Write a query to get the first transaction each customer made in every calendar month.
+
+
+select * from (
+select
+*,row_number() over(partition by customer_id,month(trasanction_date) order by transaction_date ) as trans
+transactions
+)
+where trans = 1
+
+
+
+
+select * from (
+select
+*,dense_rank() over(partition by customer_id,month(trasanction_date) order by transaction_date ) as tran_rnk
+transactions
+)
+where tran_rnk =1

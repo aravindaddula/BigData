@@ -37,8 +37,8 @@ empdata.show(truncate=False)
 #empdata.write.format("orc").save("emp/emp_details")
 
 #write data into local Fs
-empdata.write.format("orc").save("file:///home/tony/BigData/Files/emp_details")
+# empdata.write.format("orc").save("file:///home/tony/BigData/Files/emp_details")
 
 # Stop Spark session
-spark.stop()
+# spark.stop()
 

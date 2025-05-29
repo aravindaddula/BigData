@@ -1,0 +1,114 @@
+1.in hive a file is partitioned based on date wise,so for a month 30 folders are created, now i want to make partition on month column.
+how to do that and what will happen to existing data.
+
+2.i have changed datatype of a column , what will happen to existing data, will it throw errors.
+
+3.find the error string in a target directory
+
+4.how do i make sure all the parameters are passed in shell script while running
+
+
+-----> Standard chartered final round ----->
+1.extract middle name from the below string 
+Muthu|Krishnan|Gurusamy
+
+------------------
+select * from(
+	select
+	*,
+	row_number() over(partition by country_code ) as cn_num
+	countries
+)
+where cn_num <=5
+
+------------------
+
+trans_id,Amount
+T01	100
+T01	100
+T02	200
+T02	200
+T03	300
+T03	340
+T05	500
+T05	500
+
+seelct
+trans_id,count(distinct Amount) as distinct_amt
+from transactons
+having count(distinct Amount) > 1	
+
+------------------
+
+order_date	no_of_items
+2024-10-20	10
+2024-10-25	20
+2024-11-20	3
+2024-11-21	8
+2024-11-22	40
+2024-12-08	9
+2025-01-10	20
+2025-02-28	60
+
+o/p
+year	month	total_no_of_items
+2024	11	51
+2025	2	60
+
+
+
+with extract_sales_amt as (
+select
+order_date,sum(no_of_items) over(partition by year(order_date),month(order_date) order by order_date) as i_num
+,month(order_date) year,month(order_date) month
+orders
+)
+,final_op as (
+select *,
+row_number() over(partition by year,month order by i_num desc) as sales_cnt
+from extract_sales_amt
+)
+select * from final_op
+where sales_cnt = 1
+
+
+-------------------
+Address
+12|Anna Nagar|Chennai|600012
+13|Indira Nagar|Bangalore|560013
+
+select
+	*,char_index(Address,'|',2)
+	,char_index(Address,'|',3)
+	,substr(Address,char_index(Address,'|',2) + 1, char_index(Address,'|',3) - char_index(Address,'|',2) ) as cityname
+from addresses
+
+-------------------
+why spark faster than hive 
+4. eaxtract city from Address column
+
+12|Anna Nagar|Chennai|600012
+13|Indira Nagar|Bangalore|560013
+
+5.why spark faster than hive
+6.what are the options you can mention while writing a dataframe.
+7.use of partitioning and bucketing
+9.how are you using spark object, are you creating every python file ?
+10.is it possible to mention multiple python files in spark-submit command.
+11.find error string in target directory, return the files names
+12. create directories recursively
+
+
+how much data you are working in a day
+any experience with onpremises hadoop,spark, can you explian what services you are using.
+within hadoop what services are using
+diff b/w csv vs parquet
+explain the use of window functions
+diff b/w rdd and dataframe
+
+
+Ma6302374956@@
+
+Certificates of Course Completion in Cloud security Fundamentals, Security Operations Fundamentals Fundamentals
+
+

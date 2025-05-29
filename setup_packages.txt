@@ -1,0 +1,13 @@
+1.download deltalake jars
+https://repo1.maven.org/maven2/io/delta/delta-storage/3.1.0/delta-storage-3.1.0.jar
+https://repo1.maven.org/maven2/io/delta/delta-spark_2.12/3.1.0/delta-spark_2.12-3.1.0.jar
+
+
+Initial Steps:
+2.down the above jars and load into pyspark installation directory
+
+cp *.jar ~/.venv/lib/python3.12/site-packages/pyspark/jars
+
+3.Run this in terminal
+
+pyspark --packages io.delta:delta-core_2.12:2.4.0
