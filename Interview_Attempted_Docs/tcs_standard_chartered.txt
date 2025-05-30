@@ -108,7 +108,3 @@ diff b/w rdd and dataframe
 
 
 Ma6302374956@@
-
-Certificates of Course Completion in Cloud security Fundamentals, Security Operations Fundamentals Fundamentals
-
-
