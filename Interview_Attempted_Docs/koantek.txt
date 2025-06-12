@@ -1,0 +1,8 @@
+select * from (
+select
+emp_id,name,salary,dept
+,dense_rank() over(order by salary desc) as nth_sal
+salaries
+)
+
+where nth_sal = 3

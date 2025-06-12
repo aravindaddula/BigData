@@ -1,1 +1,3 @@
 jars/*.jar
+kafka_data
+zookeeper_data
