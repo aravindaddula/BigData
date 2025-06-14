@@ -213,4 +213,3 @@ group by restaurant,city,month
 )
 )
 where top_order <=5
-

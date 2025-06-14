@@ -37,7 +37,7 @@ Implement a query to find the top three employees with the highest salaries in e
 */
 
 
-employees
+
 
 
 /*
@@ -51,3 +51,16 @@ transactions
 */
 
 records 
+
+
+
+/* Using it for Kafka testing: When i insert the records into this table i want that
+   records to go in the deltalake employee master */
+   
+
+SELECT * FROM employees
+
+insert into employees (emp_id,emp_name,department,salary) values
+(11,'Newton','Sales',71000.00) ,
+(12,'Judith','Mrketing',68000.00) ,
+(13,'Judith','Mrketing',69000.00)

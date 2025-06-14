@@ -1,0 +1,4 @@
+{"commitInfo":{"timestamp":1749923891955,"operation":"STREAMING UPDATE","operationParameters":{"outputMode":"Append","queryId":"b8d7617f-5aeb-4538-bff0-be01f71896b6","epochId":"0"},"isolationLevel":"Serializable","isBlindAppend":true,"operationMetrics":{"numRemovedFiles":"0","numOutputRows":"0","numOutputBytes":"406","numAddedFiles":"0"},"engineInfo":"Apache-Spark/3.5.5 Delta-Lake/3.1.0","txnId":"67f7a2bb-f2bf-435e-b26a-9a56ebbcaafd"}}
+{"metaData":{"id":"6f83e0c1-01c1-45c6-adb4-e6e8b51630c9","format":{"provider":"parquet","options":{}},"schemaString":"{\"type\":\"struct\",\"fields\":[{\"name\":\"message\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"batch_time\",\"type\":\"timestamp\",\"nullable\":true,\"metadata\":{}}]}","partitionColumns":[],"configuration":{},"createdTime":1749923889770}}
+{"protocol":{"minReaderVersion":1,"minWriterVersion":2}}
+{"txn":{"appId":"b8d7617f-5aeb-4538-bff0-be01f71896b6","version":0,"lastUpdated":1749923891912}}
