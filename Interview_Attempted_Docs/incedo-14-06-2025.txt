@@ -1,8 +1,10 @@
 ----------->1st Round
 1.how do you handle 100gb csv file that is not partitioned
-2.complex structures,
+2.complex structures in pyspark
 3.how do you handle CI/CD
 4.Print 1-10 digits without using numbers
 start=1
 end=11
 for num in range(start,end):
+
+5.serialization , deserilization

@@ -33,7 +33,7 @@ transaction=json.dumps(cust_transaction)
 
 '''This will return 1-10 numbers '''
 
-for num in range(10):
+for num in range(50,57):
     msg=f'Current Number is {num}'
     cust_producer.produce(topic,value=msg)
 

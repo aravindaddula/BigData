@@ -1,0 +1,2 @@
+To ensure we get a clearer understanding, could you please elaborate on your 
+experience with Scala, particularly in a banking or financial interested in

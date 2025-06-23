@@ -1,3 +1,42 @@
+/* Using it for Kafka testing: When i insert the records into this table i want that
+   records to go in the deltalake employee master */
+DROP PUBLICATION avengers_pub 
+--CREATE PUBLICATION avengers_pub FOR TABLE employees;
+CREATE PUBLICATION avengers_pub FOR TABLE public.employees;
+
+SELECT * FROM pg_publication_tables WHERE pubname = 'avengers_pub';
+select * from pg_settings where name='wal_level'
+\du jarvis
+ALTER ROLE jarvis WITH REPLICATION;
+SELECT * FROM pg_replication_slots;
+GRANT ALL PRIVILEGES ON DATABASE avengers TO jarvis;
+SELECT * FROM pg_publication;
+SELECT * FROM pg_publication_tables;
+
+
+
+
+--------------------------------------
+SELECT * FROM employees
+
+insert into employees (emp_id,emp_name,department,salary) values
+(14,'Judith','Mrketing',68000.00) ,
+--(11,'Newton','Sales',71000.00) ,
+(12,'Judith','Mrketing',68000.00) ,
+(13,'Judith','Mrketing',69000.00)
+
+
+
+
+
+
+
+
+
+
+
+-----------------------------------------------------
+
 /* Problem:It should cover all the edge cases also if there are even or odd number of records.
 "Given a table of students sitting in sequentially numbered seats, write a query to swap every pair of adjacent students.
 If there's an odd number of students, the last one remains unchanged."
@@ -54,13 +93,4 @@ records
 
 
 
-/* Using it for Kafka testing: When i insert the records into this table i want that
-   records to go in the deltalake employee master */
-   
 
-SELECT * FROM employees
-
-insert into employees (emp_id,emp_name,department,salary) values
-(11,'Newton','Sales',71000.00) ,
-(12,'Judith','Mrketing',68000.00) ,
-(13,'Judith','Mrketing',69000.00)
