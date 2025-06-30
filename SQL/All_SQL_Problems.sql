@@ -1,8 +1,8 @@
 /* Using it for Kafka testing: When i insert the records into this table i want that
    records to go in the deltalake employee master */
-DROP PUBLICATION avengers_pub 
+--DROP PUBLICATION avengers_pub 
 --CREATE PUBLICATION avengers_pub FOR TABLE employees;
-CREATE PUBLICATION avengers_pub FOR TABLE public.employees;
+--CREATE PUBLICATION avengers_pub FOR TABLE public.employees;
 
 SELECT * FROM pg_publication_tables WHERE pubname = 'avengers_pub';
 select * from pg_settings where name='wal_level'
@@ -89,8 +89,7 @@ transactions
 2. Remove Duplicate Records While Keeping the Latest Based on Timestamp
 */
 
-records 
+select * from records 
 
-
-
-
+insert into records (id,unique_key,value,updated_at)
+values( 6 ,'A126','Value6','2025-06-01T10:00')
