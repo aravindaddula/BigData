@@ -17,7 +17,7 @@ spark = SparkSession.builder \
 
 spark.conf.set("spark.sql.crossJoin.enabled", True)
 spark.conf.set("spark.sql.debug.maxToStringFields", 2000)
-spark.SparkContext.setLogLevel("ERROR")
+# spark.SparkContext.setLogLevel("ERROR")
 # .config("spark.sql.catalog.glue_catalog.warehouse", dmd_coll_path) \
 
 # spark
